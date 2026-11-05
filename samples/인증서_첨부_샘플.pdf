@@ -1,0 +1,42 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 607 >>
+stream
+BT /F1 11 Tf 56 790 Td 15 TL
+/F1 15 Tf (TYPE APPROVAL CERTIFICATE \(SAMPLE - FICTITIOUS\)) Tj /F1 11 Tf T* T*
+(Certificate No.:) Tj 170 0 Td (TA-21-1000) Tj -170 0 Td T*
+(Society:) Tj 170 0 Td (DNV) Tj -170 0 Td T*
+(Date of issue:) Tj 170 0 Td (2021-12-01) Tj -170 0 Td T*
+(Valid until:) Tj 170 0 Td (2026-11-30) Tj -170 0 Td T*
+(Manufacturer:) Tj 170 0 Td (Example Hydraulics Ltd.) Tj -170 0 Td T*
+(Product:) Tj 170 0 Td (Hydraulic cylinder) Tj -170 0 Td T*
+(Type designation:) Tj 170 0 Td (HC-100 series) Tj -170 0 Td T*
+(This document is a generated sample for testing. All values are invented.) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000899 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+996
+%%EOF

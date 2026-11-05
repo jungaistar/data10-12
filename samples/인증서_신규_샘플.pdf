@@ -1,0 +1,53 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1435 >>
+stream
+BT /F1 11 Tf 56 790 Td 15 TL
+/F1 15 Tf (TYPE APPROVAL CERTIFICATE) Tj /F1 11 Tf T* T*
+(Certificate No.:) Tj 170 0 Td (TA-26-0981) Tj -170 0 Td T*
+(Date of issue:) Tj 170 0 Td (2026-10-15) Tj -170 0 Td T*
+(Valid until:) Tj 170 0 Td (2031-10-14) Tj -170 0 Td T*
+(Manufacturer:) Tj 170 0 Td (Example Hydraulics Ltd.) Tj -170 0 Td T*
+(Contact:) Tj 170 0 Td (cert.team@example-hydraulics.test) Tj -170 0 Td T*
+(Product:) Tj 170 0 Td (Hydraulic cylinder) Tj -170 0 Td T*
+(Type designation:) Tj 170 0 Td (HC-100 series) Tj -170 0 Td T*
+(Bore diameter:) Tj 170 0 Td (40 - 250 mm) Tj -170 0 Td T*
+(Rated pressure:) Tj 170 0 Td (420 bar) Tj -170 0 Td T*
+(Test pressure:) Tj 170 0 Td (630 bar) Tj -170 0 Td T*
+(Operating temperature:) Tj 170 0 Td (-20 to +80 deg C) Tj -170 0 Td T*
+(Rules:) Tj 170 0 Td (Rules for Classification, Part 4 Chapter 7 \(edition January 2025\)) Tj -170 0 Td T*
+(Application:) Tj 170 0 Td (Steering gear, deck machinery and offshore cranes) Tj -170 0 Td T*
+(Place of manufacture:) Tj 170 0 Td (Plant 1 and Plant 2) Tj -170 0 Td T*
+(Conditions of approval:) Tj 170 0 Td () Tj -170 0 Td T*
+(1. Each cylinder shall be pressure tested at 1.5 x rated pressure.) Tj T*
+(2. Material certificates shall be type 3.1 according to EN 10204.) Tj T*
+(3. Marking shall include type designation, serial number and rated pressure.) Tj T*
+(4. Type testing shall be repeated when design changes affect pressure-retaining parts.) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001728 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1825
+%%EOF

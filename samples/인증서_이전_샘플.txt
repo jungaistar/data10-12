@@ -1,0 +1,19 @@
+TYPE APPROVAL CERTIFICATE
+Certificate No.: TA-21-0457
+Date of issue: 2021-11-30
+Valid until: 2026-11-29
+Manufacturer: Example Hydraulics Ltd.
+Contact: cert.team@example-hydraulics.test
+Product: Hydraulic cylinder
+Type designation: HC-100 series
+Bore diameter: 40 - 200 mm
+Rated pressure: 350 bar
+Test pressure: 525 bar
+Operating temperature: -20 to +80 deg C
+Rules: Rules for Classification, Part 4 Chapter 7 (edition July 2020)
+Application: Steering gear and deck machinery
+Place of manufacture: Plant 1
+Conditions of approval:
+1. Each cylinder shall be pressure tested at 1.5 x rated pressure.
+2. Material certificates shall be type 3.1 according to EN 10204.
+3. Marking shall include type designation and serial number.

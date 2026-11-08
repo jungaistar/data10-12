@@ -6,7 +6,7 @@
   var L = window.CTLogic, S = window.CTStore, C = window.CTCharts, AIP = window.AIPanel, Sample = window.CTSample, P = window.CTPdfs;
   /* 판 맞추기 — 브라우저가 옛 logic.js 와 새 app.js 를 섞어 쓰면(Pages 캐시) 버튼과 결과가 어긋날 수 있어, 섞였으면 계산하지 않고 새로고침을 안내합니다.
      판은 scripts/bump-version.mjs 로 index.html(?v=) · logic.js 와 함께 올립니다. */
-  var APP_VERSION = '2026-10-27.1';
+  var APP_VERSION = '2026-11-08.1';
   if (!L || L.VERSION !== APP_VERSION) {
     var m0 = document.getElementById('main') || document.body;
     m0.innerHTML = '<section class="card" id="versionMismatch"><h1>새 판이 나왔습니다 — 새로고침(Ctrl+F5)해 주세요</h1><p class="alert warn">이 브라우저가 옛 파일과 새 파일을 섞어 불러왔습니다(js/logic.js ' +
@@ -71,6 +71,16 @@
   }
   function pageHead(stage, title, lead, right) {
     return h('div', { class: 'page-head' }, h('div', { class: 'titles' }, h('div', { class: 'stage' }, stage), h('h1', null, title), lead ? h('p', { class: 'lead' }, lead) : null), right || null);
+  }
+  /* 시작 화면 그림(수강생 제공, 10-28) — 대시보드 · (데이터가 없을 때의) 가져오기 화면 맨 위.
+     글자는 그림 안에 있으므로 제목(h1)은 그대로 두고 그림은 alt 로만 설명합니다.
+     높이는 화면 높이의 34% 까지(CSS) — 노트북 화면에서도 아래 단추·타일이 첫 화면에 보이게. */
+  function startHero() {
+    return h('figure', { class: 'start-hero no-print' },
+      h('picture', null,
+        h('source', { type: 'image/webp', srcset: 'images/start-hero.webp' }),
+        h('img', { src: 'images/start-hero.jpg', width: '1600', height: '901', decoding: 'async', fetchpriority: 'high',
+          alt: '인증서 관리 — 밤 항구에 정박한 컨테이너선과 크레인 그림' })));
   }
   function emptyNotice() {
     return h('section', { class: 'card empty' },
@@ -219,7 +229,7 @@
     drop.addEventListener('dragover', function (e) { e.preventDefault(); drop.classList.add('over'); });
     drop.addEventListener('dragleave', function () { drop.classList.remove('over'); });
     drop.addEventListener('drop', function (e) { e.preventDefault(); drop.classList.remove('over'); handleFiles(e.dataTransfer.files); });
-    var out = [pageHead('0', '데이터 가져오기', '인증 관리대장 엑셀을 넣으면 열을 찾아 연결하고, 만료일에서 거꾸로 갱신 일정을 세웁니다.'),
+    var out = [db.records.length ? null : startHero(), pageHead('0', '데이터 가져오기', '인증 관리대장 엑셀을 넣으면 열을 찾아 연결하고, 만료일에서 거꾸로 갱신 일정을 세웁니다.'),
       h('section', { class: 'card' },
         drop,
         h('div', { class: 'btn-row' },
@@ -279,7 +289,7 @@
 
   /* ── ① 대시보드 ─────────────────────────── */
   function pageDash() {
-    if (!db.records.length) return [pageHead('①', '대시보드', '인증별 상태 신호와 지금 할 일'), emptyNotice()];
+    if (!db.records.length) return [startHero(), pageHead('①', '대시보드', '인증별 상태 신호와 지금 할 일'), emptyNotice()];
     var Sx = settings(), t = today(), sm = L.summary(db.records, Sx, t);
     var c = sm.count;
     var tiles = h('div', { class: 'tiles status-tiles' },
@@ -294,6 +304,7 @@
     var todo = sm.attention.concat(sm.list.filter(function (x) { return x.st.code === 'active' && x.st.stage === 0; }));
     var al = L.alerts(db.records, Sx, t);
     return [
+      startHero(),
       pageHead('①', '대시보드', '관리대장의 만료일과 인증 종류별 리드타임으로 지금 상태를 봅니다. 날짜는 기준일 ' + t + ' 기준입니다.',
         h('div', { class: 'btn-row no-print' }, h('a', { class: 'btn btn-primary', href: '#/alert' }, '오늘 알림 ' + al.length + '건 보기'), h('a', { class: 'btn', href: '#/gantt' }, '갱신 타임라인'))),
       tiles,

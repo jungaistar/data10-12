@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기획서 — 인증서 갱신 관리</title>
+<meta name="robots" content="index,follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.plan-figs figure{margin:0 0 22px;} .plan-figs img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;}
+.plan-figs figcaption{font-size:13px;color:var(--sub);text-align:center;margin-top:6px;}
+.plan td{white-space:normal;} .plan td .btn{min-height:36px;white-space:nowrap;}
+h3{font-size:15px;margin:16px 0 6px;} main ul{margin:0 0 10px 20px;}
+:root{--ink:#152232;--sub:#5b6b7b;--line:#d8e0e8;--brand:#154b6e;--bg:#f5f7fa;--container-pad:20px}
+@media (min-width:640px){:root{--container-pad:28px}} @media (min-width:1024px){:root{--container-pad:40px}}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Pretendard,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;word-break:keep-all;overflow-wrap:break-word}
+a{color:var(--brand)} .wrap,.topnav-inner{max-width:calc(1100px + 2*var(--container-pad));margin:0 auto;padding:0 var(--container-pad)}
+.topnav{background:#0d3350;color:#fff;position:sticky;top:0;z-index:5} .topnav-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;min-height:56px}
+.topnav-brand{color:#fff;text-decoration:none;font-weight:700} .topnav-brand small{font-weight:400;opacity:.75;margin-left:6px}
+.topnav-links{list-style:none;display:flex;gap:4px;margin:0;padding:0} .topnav-links a{color:#dbe7f0;text-decoration:none;padding:8px 12px;border-radius:8px;display:block} .topnav-links a.active,.topnav-links a:hover{background:rgba(255,255,255,.14);color:#fff}
+.hero{background:linear-gradient(180deg,#154b6e,#0d3350);color:#fff;padding:40px 0 36px} .hero h1{margin:6px 0 10px;font-size:clamp(24px,3.4vw,34px);color:#fff} .hero p{margin:0;opacity:.9;max-width:860px} .eyebrow{font-size:13px;opacity:.8}
+main{padding:28px 0 40px} .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;margin:0 0 20px} .sub{color:var(--sub)}
+.tablewrap{overflow-x:auto} table{border-collapse:collapse;width:100%;font-size:14.5px} th,td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top} th{background:#eef3f7;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:6px 14px;border-radius:8px;border:1px solid var(--brand);text-decoration:none;font-weight:600} .btn.primary{background:var(--brand);color:#fff}
+footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--sub);font-size:13.5px}
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="주요 메뉴">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html">인증서 갱신 관리 <small>data10-12 · 기획 윤한산</small></a>
+    <ul class="topnav-links">
+      <li><a href="index.html">도구</a></li>
+      <li><a href="plan.html" class="active" aria-current="page">기획서</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">현장 데이터 디지털화 전문가과정 · 2차수 · 프로젝트 12 · 기획서 v2.0</div>
+  <h1>인증서 갱신 관리 기획서</h1>
+  <p>인증 관리대장 엑셀을 넣으면 만료일에서 거꾸로 갱신 일정을 세워 상태 신호와 간트로 보여 주고, 부서별 알림 메일 초안 · 모델-형식별 인증 이력과 인증서 PDF · 신구 인증서 비교 보고서를 만드는 도구입니다.</p>
+</div></header>
+<main><div class="wrap">
+<div class="card">
+  <h2 style="margin-top:0">기획서 내려받기</h2>
+  <p class="sub">파이프라인 · 아키텍처 · 와이어프레임 · 개발일지가 들어간 워드 문서입니다. 버전마다 따로 남깁니다.</p>
+  <div class="tablewrap plan"><table><thead><tr><th>버전</th><th>날짜</th><th>바뀐 점</th><th>파일</th></tr></thead><tbody><tr><td><b>v2.0</b></td><td>2026-11-10</td><td>최종 기획서 — 파이프라인 · 아키텍처 · 와이어프레임 정리 / 로그인 · 사용 신청 · 관리자 승인(요청자 Supabase 로 옮길 수 있게) / 로그인 전 대문</td><td><a class="btn primary" href="docs/기획서/data10-12_윤한산_인증서갱신관리_기획서_v2.0.docx" download>워드 내려받기</a></td></tr></tbody></table></div>
+</div>
+<div class="card plan">
+  <h2 style="margin-top:0">요구사항과 구현</h2>
+  <div class="tablewrap"><table><thead><tr><th>기획서 요구</th><th>구현</th></tr></thead><tbody><tr><td>업무흐름도(관련부서 R/R 포함)</td><td>단계표(RACI)를 고치면 부서별 줄 흐름도가 다시 그려짐, SVG 내려받기 · RACI 규칙 점검</td></tr><tr><td>실시간 관리대장 비주얼화(준비 · 기관 피드백 감안 Lead-Time)</td><td>인증 종류별 리드타임 · 기관별 추가 일수로 만료일 역산 → 대시보드 상태 신호 · 갱신 타임라인(간트)</td></tr><tr><td>영업 · 품질 · 개발 Alert</td><td>오늘 연락할 사람(인증마다 가장 최근의 끝나지 않은 일) · 부서별 메일 초안(메일 앱 · 복사). 자동 발송은 2단계</td></tr><tr><td>이전/신규 인증서 변경 요약 · 보고서</td><td>PDF 글자층 · 붙여 넣기 → 항목 · 문장 · 낱말 비교, AI 요약 프롬프트(회사명 · 메일 · 전화 · 번호 가림), 보고서 인쇄 · Word · 엑셀</td></tr><tr><td>운영 중 인증의 과거 이력(10-27)</td><td>③-2 「과거 이력 추가」 · 엑셀 「인증 이력」 시트 · 다음 주기로 넘기기</td></tr><tr><td>중지된 인증의 이력(10-27)</td><td>운영 상태 중지 · 만료 종료 · 폐기 + 사유 · 중지일 — 알림 · 건수에서 빠지고 이력에 남음</td></tr><tr><td>인증서 PDF 올려 보기(10-27)</td><td>인증 · 이력 줄마다 PDF 한 장(IndexedDB, 15MB) — 화면 안 보기 · 새 탭 · 바꾸기 · 빼기</td></tr><tr><td>「모델-형식」 Key 로 그룹핑(10-27)</td><td>띄어쓰기 · 대소문자 · 하이픈 모양을 무시한 묶음 키, ③-2 모델별 이력 화면</td></tr><tr><td>담당자 e-Mail 활용</td><td>2단계 — 메일에서 신청 · 피드백 날짜 뽑기</td></tr></tbody></table></div>
+</div>
+<div class="card plan-figs"><h2 style="margin-top:0">그림으로 보기</h2><figure><img src="docs/img/pipeline.png" alt="처리 흐름(파이프라인)" loading="lazy"><figcaption>처리 흐름(파이프라인)</figcaption></figure><figure><img src="docs/img/architecture.png" alt="구성(아키텍처)" loading="lazy"><figcaption>구성(아키텍처)</figcaption></figure><figure><img src="docs/img/wireframe-1.png" alt="와이어프레임 — 로그인 전 대문" loading="lazy"><figcaption>와이어프레임 — 로그인 전 대문</figcaption></figure><figure><img src="docs/img/wireframe-2.png" alt="와이어프레임 — ① 대시보드" loading="lazy"><figcaption>와이어프레임 — ① 대시보드</figcaption></figure><figure><img src="docs/img/wireframe-3.png" alt="와이어프레임 — ③-2 모델별 이력" loading="lazy"><figcaption>와이어프레임 — ③-2 모델별 이력</figcaption></figure><figure><img src="docs/img/screen.png" alt="실제 화면(예제 데이터)" loading="lazy"><figcaption>실제 화면(예제 데이터)</figcaption></figure></div>
+<div class="card"><h2 style="margin-top:0">개발일지</h2><h3>2026-11-10 · 최종 기획서 · 로그인 · 대문</h3><ul><li>로그인 · 사용 신청 · 관리자 승인 키트(회원 표 data1012_members)</li><li>로그인 전 대문 문구를 기획서의 핵심 기능 · 처리 흐름에서</li><li>최종 기획서 v2.0(워드 · plan.html · 그림 · CHANGELOG), README 정리</li><li>시험 56개 통과, 이전 점검 통과</li></ul><h3>2026-11-08 · 시작 화면 그림</h3><ul><li>수강생이 보낸 「인증서 관리」 그림을 대시보드 · 가져오기 맨 위에(WebP + JPG)</li><li>높이를 화면의 34%(최대 360px)로 제한해 첫 단추가 첫 화면 안에</li></ul><h3>2026-10-27 · 2차 반영</h3><ul><li>운영 상태(운영 중 · 중지 · 만료 종료 · 폐기) · 이력 상태, 모델-형식 묶음 키</li><li>③-2 모델별 이력 화면, 인증서 PDF(IndexedDB), 엑셀 「인증 이력」 시트</li><li>로직 검사 55 · 브라우저 점검 67</li></ul><h3>2026-10-21 · 기획서 정리 · 1단계</h3><ul><li>가상 관리대장 22건과 인증서 한 쌍으로 화면 9개</li><li>만료일 역산 · 상태 신호 · 알림 메일 초안 · RACI 흐름도 · 인증서 비교 · 보고서</li><li>로직 검사 41</li></ul></div>
+</div></main>
+<footer><div class="wrap">현장 데이터 디지털화 전문가과정 · 2차수 · 프로젝트 12 · 기획 윤한산 · <a href="https://data10-00.jobability.co.kr/">2차수 프로젝트 모음</a></div></footer>
+</body>
+</html>

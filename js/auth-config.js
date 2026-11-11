@@ -8,6 +8,7 @@ window.AUTH_CONFIG = {
   "kakao": true,
   "idleMinutes": 30,
   "localBypass": true,
+  "board": true,
   "site": {
     "title": "인증서 갱신 관리",
     "summary": "인증 관리대장 엑셀을 넣으면 만료일에서 거꾸로 갱신 일정을 세워 상태 신호와 간트로 보여 주고, 부서별 알림 메일 초안 · 모델-형식별 인증 이력과 인증서 PDF · 신구 인증서 비교 보고서를 만드는 도구입니다.",

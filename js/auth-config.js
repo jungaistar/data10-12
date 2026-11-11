@@ -209,7 +209,19 @@ window.AUTH_CONFIG = {
       },
       "image": "images/start-hero.jpg",
       "imageMode": "banner",
-      "imageAlt": "인증서 관리 — Parker"
+      "imageAlt": "인증서 관리 — Parker",
+      "slides": [
+        {
+          "image": "images/slide-1.jpg"
+        },
+        {
+          "image": "images/slide-2.jpg"
+        },
+        {
+          "image": "images/slide-3.jpg"
+        }
+      ],
+      "heroMode": "slide"
     }
   }
 };

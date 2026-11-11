@@ -198,7 +198,9 @@ window.AUTH_CONFIG = {
     },
     "landing": {
       "company": {
-        "name": "Parker"
+        "name": "Parker",
+        "logo": "images/logo.png",
+        "logoH": 34
       },
       "colors": {
         "navy": "#0c2340",
